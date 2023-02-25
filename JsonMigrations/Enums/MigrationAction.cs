@@ -1,10 +1,10 @@
-﻿namespace JsonMigrator.Enums;
+﻿namespace JsonMigrations.Enums;
 
 public enum MigrationAction
 {
 
     /// <summary>
-    /// Ignores the migration fault and will try to execute the next migrations
+    /// Ignores the migration fault and will try to execute the next migrations.
     /// </summary>
     Ignore,
     /// <summary>
@@ -12,7 +12,7 @@ public enum MigrationAction
     /// </summary>
     Throw,
     /// <summary>
-    /// Will restore the json file to its original form from the start
+    /// Will restore the json file to its original form from the start.
     /// </summary>
     Restore,
 }

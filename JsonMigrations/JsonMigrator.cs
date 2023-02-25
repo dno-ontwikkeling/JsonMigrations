@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using JsonMigrator.Enums;
-using JsonMigrator.Exceptions;
-using JsonMigrator.Interfaces;
+using JsonMigrations.Enums;
+using JsonMigrations.Exceptions;
+using JsonMigrations.Interfaces;
 
-namespace JsonMigrator;
+namespace JsonMigrations;
 
 public static class JsonMigrator
 {
@@ -21,9 +21,9 @@ public static class JsonMigrator
 
     // ReSharper disable once UnusedMember.Global
     /// <summary>
-    /// This function will perform the migration for the specified MigrationKey on the specified files
+    /// This function will perform the migration for the specified MigrationKey on the specified files.
     /// </summary>
-    /// <param name="migrationKey">The key that will be used to determine which migrations will be run</param>
+    /// <param name="migrationKey">The key that will be used to determine which migrations will be run.</param>
     /// <param name="filePaths">Files to be migrated</param>
     public static void Migrate(string migrationKey, params string[] filePaths)
     {
@@ -48,9 +48,9 @@ public static class JsonMigrator
 
     // ReSharper disable once UnusedMember.Global
     /// <summary>
-    /// This will dynamically add all migrations using IJsonMigration contained in the specified assemblies to the JsonMigrator
+    /// This will dynamically add all migrations using IJsonMigration contained in the specified assemblies to the JsonMigrator.
     /// </summary>
-    /// <param name="assemblies">Assemblies to search for migrations</param>
+    /// <param name="assemblies">Assemblies to search for migrations.</param>
     public static void AddJsonMigrations(params Assembly[] assemblies)
     {
         //Get all JsonMigration in the assemblies
@@ -63,9 +63,9 @@ public static class JsonMigrator
 
     // ReSharper disable once UnusedMember.Global
     /// <summary>
-    /// This will dynamically add all migrations using IJsonMigration contained in the specified namespaces to the JsonMigrator
+    /// This will dynamically add all migrations using IJsonMigration contained in the specified namespaces to the JsonMigrator.
     /// </summary>
-    /// <param name="namespaces">Namespaces to search for migrations</param>
+    /// <param name="namespaces">Namespaces to search for migrations.</param>
     public static void AddJsonMigrations(params string[] namespaces)
     {
         //Get all JsonMigration in the namespaces
@@ -83,7 +83,7 @@ public static class JsonMigrator
             if (jsonObject is null) throw new InvalidJsonException("The file doesn't contain valid json.");
             return jsonObject;
         }
-        catch (Exception )
+        catch (Exception)
         {
             switch (_jsonMigratorOptions.InvalidJsonAction)
             {
@@ -149,15 +149,15 @@ public static class JsonMigrator
             }
             catch (Exception)
             {
-               
+
                 switch (_jsonMigratorOptions.MigrationFaultAction)
                 {
                     case MigrationAction.Throw:
                         throw;
-                    case MigrationAction.Restore: 
+                    case MigrationAction.Restore:
                         File.WriteAllText(filePath, _rawJson);
                         break;
-                    case MigrationAction.Ignore:  
+                    case MigrationAction.Ignore:
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

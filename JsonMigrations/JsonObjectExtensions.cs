@@ -1,6 +1,6 @@
 using System.Text.Json.Nodes;
 
-namespace JsonMigrator;
+namespace JsonMigrations;
 
 public static class JsonObjectExtensions
 {

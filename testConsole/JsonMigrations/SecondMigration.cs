@@ -1,17 +1,17 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Nodes;
-using JsonMigrator.Interfaces;
+using JsonMigrations;
+using JsonMigrations.Interfaces;
 
-namespace testConsole.JsonMigrations;
+namespace Example.JsonMigrations;
 
-public class RemoveGrpcJsonMigration : IJsonMigration
+public class SecondMigration : IJsonMigration
 {
     public int Order => 1;
     public string MigrationKey => "AppsettingsProgram";
     public void Up(JsonObject jsonObject, JsonSerializerOptions? options = default)
     {
-        jsonObject.Remove("GRPC");
-        jsonObject.TryAdd("test",2);
+        jsonObject.RenameProperty("DummyProperty", "ExampleProperty");
 
     }
 }

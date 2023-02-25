@@ -1,22 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Text.Json;
+using Example.JsonMigrations;
+using JsonMigrations;
+using JsonMigrations.Enums;
 
-using JsonMigrator;
-using JsonMigrator.Enums;
-using testConsole.Converters;
 
-Console.WriteLine("Hello, World!");
-
+//Setting the Migration Options
 var options = new JsonMigratorOptions()
-{
-    InvalidJsonAction = InvalidJsonAction.Throw,
-    FileNotExistAction = FileAction.Create,
-    MigrationFaultAction = MigrationAction.Ignore
-};
+    {
+        InvalidJsonAction = InvalidJsonAction.Throw,
+        FileNotExistAction = FileAction.Throw,
+        MigrationFaultAction = MigrationAction.Ignore,
+        JsonSerializerOptions = new JsonSerializerOptions()
+        {
+            WriteIndented = true,
+        }
+    };
+JsonMigrator.SetOptions(options);
 
-JsonMigrator.JsonMigrator.AddJsonMigrations(typeof(Program).Assembly);
+//Adding the Migrations
+JsonMigrator.AddJsonMigrations(typeof(FristMigration).Assembly);
+//JsonMigrator.JsonMigrator.AddJsonMigrations(typeof(FristMigration).Namespace!);
 
-#if DEBUG
-JsonMigrator.JsonMigrator.Migrate("AppsettingsProgram", "../../../appsettings.development.json", "../../../appsettings.json");
-#endif
 
-JsonMigrator.JsonMigrator.Migrate("AppsettingsProgram", "./appsettings.json");
+
+//Executing the migrations
+JsonMigrator.Migrate("AppsettingsProgram", "../../../appsettings.development.json", "../../../appsettings.json");
+

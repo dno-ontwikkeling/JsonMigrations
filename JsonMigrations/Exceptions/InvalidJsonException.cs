@@ -1,5 +1,6 @@
 ﻿// ReSharper disable UnusedMember.Global
-namespace JsonMigrator.Exceptions;
+
+namespace JsonMigrations.Exceptions;
 
 public class InvalidJsonException : Exception
 {

@@ -1,17 +1,17 @@
-﻿namespace JsonMigrator.Enums;
+﻿namespace JsonMigrations.Enums;
 
 public enum FileAction
 {
     /// <summary>
-    /// Don't do anything for this file
+    /// Don't do anything for this file.
     /// </summary>
     None,
     /// <summary>
-    /// Creates empty json file
+    /// Creates empty json file.
     /// </summary>
     Create,
     /// <summary>
-    /// Throws exception
+    /// Throws exception.
     /// </summary>
     Throw,
 }
