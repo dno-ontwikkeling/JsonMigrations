@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonMigrator", "JsonMigrator\JsonMigrator.csproj", "{40CB96BE-409C-4C64-A00C-51A1C83BC0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testConsole", "testConsole\testConsole.csproj", "{C4F26AB2-7201-4FE6-BC8E-441BD00BDF29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40CB96BE-409C-4C64-A00C-51A1C83BC0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CB96BE-409C-4C64-A00C-51A1C83BC0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CB96BE-409C-4C64-A00C-51A1C83BC0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CB96BE-409C-4C64-A00C-51A1C83BC0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F26AB2-7201-4FE6-BC8E-441BD00BDF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F26AB2-7201-4FE6-BC8E-441BD00BDF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F26AB2-7201-4FE6-BC8E-441BD00BDF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F26AB2-7201-4FE6-BC8E-441BD00BDF29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDD0FBEB-1716-47A4-BAE7-9B5CE89EBF6E}
+	EndGlobalSection
+EndGlobal
