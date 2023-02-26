@@ -7,8 +7,8 @@
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>JsonMigrations</Title>
-	<Authors>Olivier</Authors>
-	<Company>DNO-Ontwikkeling</Company>
+	<Authors>DNO-Development</Authors>
+	<Company>DNO-Development</Company>
 	<Description>A Migration system to that makes it possible to update a json without knowing the state of the json update a json files</Description>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageProjectUrl>https://github.com/dno-ontwikkeling/JsonMigrations</PackageProjectUrl>
