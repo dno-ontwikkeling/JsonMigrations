@@ -1,6 +1,7 @@
 ﻿// ReSharper disable PropertyCanBeMadeInitOnly.Global
 // ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
 
+using System.Text.Encodings.Web;
 using System.Text.Json;
 using JsonMigrations.Enums;
 
@@ -24,5 +25,7 @@ public class JsonMigratorOptions
     /// <summary>
     /// This sets the JsonSerializerOptions for reading the json file and these options are also available in the JsonMigrations.
     /// </summary>
-    public JsonSerializerOptions JsonSerializerOptions { get; set; } = new() { WriteIndented = true };
+    public JsonSerializerOptions JsonSerializerOptions { get; set; } = new() { WriteIndented = true,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+    };
 }

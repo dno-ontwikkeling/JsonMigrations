@@ -11,7 +11,7 @@ public class SecondMigration : IJsonMigration
     public string MigrationKey => "AppsettingsProgram";
     public void Up(JsonObject jsonObject, JsonSerializerOptions? options = default)
     {
-        jsonObject.RenameProperty("DummyProperty", "ExampleProperty");
+        jsonObject.Remove("DummyProperty");
 
     }
 }
