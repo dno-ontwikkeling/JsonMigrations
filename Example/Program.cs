@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text.Encodings.Web;
+using System.Text.Json;
 using Example.JsonMigrations;
 using JsonMigrations;
 using JsonMigrations.Enums;
@@ -9,17 +10,18 @@ var options = new JsonMigratorOptions()
     {
         InvalidJsonAction = InvalidJsonAction.Throw,
         FileNotExistAction = FileAction.Throw,
-        MigrationFaultAction = MigrationAction.Ignore,
+        MigrationFaultAction = MigrationAction.Throw,
         JsonSerializerOptions = new JsonSerializerOptions()
         {
-            WriteIndented = true,
+            WriteIndented = true, 
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
         }
     };
 JsonMigrator.SetOptions(options);
 
 //Adding the Migrations
 JsonMigrator.AddJsonMigrations(typeof(FristMigration).Assembly);
-//JsonMigrator.JsonMigrator.AddJsonMigrations(typeof(FristMigration).Namespace!);
+//JsonMigrator.AddJsonMigrations(typeof(FristMigration).Namespace!);
 
 
 
