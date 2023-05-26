@@ -1,0 +1,5 @@
+{
+  "firstObj": 123456,
+  "secondObj": "New value",
+  "Migration": "TestMigrationForDeleting"
+}
