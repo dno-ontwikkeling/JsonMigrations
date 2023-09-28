@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonMigrator.Tests", "JsonMigrations.Tests\JsonMigrator.Tests.csproj", "{D26BD4B2-994F-4FA3-8B30-41B4F2083403}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonMigrator.Tool", "JsonMigrator.Tool\JsonMigrator.Tool.csproj", "{E094C285-F5D4-4164-A271-8D14320FBFCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D26BD4B2-994F-4FA3-8B30-41B4F2083403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D26BD4B2-994F-4FA3-8B30-41B4F2083403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D26BD4B2-994F-4FA3-8B30-41B4F2083403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E094C285-F5D4-4164-A271-8D14320FBFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E094C285-F5D4-4164-A271-8D14320FBFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E094C285-F5D4-4164-A271-8D14320FBFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E094C285-F5D4-4164-A271-8D14320FBFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
